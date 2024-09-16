@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flip-Flops Guide</title>
+    <style>
+        .pCont{
+            color: white;
+        }
+    </style>
+    <link rel="icon" href="https://site.unifesp.br/caec.sjc/images/logos/panda.png" type="image/x-icon">
+</head>
+<body>
+    <nav id = "navegationBar">
+        <div class = "option" onclick="windowTravel('index.html')">
+            Install WiredPanda
+        </div>
+        <div class = "option" onclick="windowTravel('ports.html')">
+            Portas lógicas
+        </div>
+        <div class = "option" onclick="windowTravel('flipflop.html')">
+            Flip-flops
+        </div>
+        <div class = "leg">
+            Desenvolvido por Leonardo Arazo e Clara Cavalheiro.
+        </div>
+    </nav>
+
+    <h1 class = "cl2">
+        Clique nos flip-flops
+    </h1>
+
+    <div class="containerD">
+        <p class="pCont">O Flip-Flop D é um elemento de memória que armazena um bit de informação. Ele tem uma entrada de dados (D), uma entrada de relógio (CLK) e uma saída (Q). A saída Q assume o valor da entrada D na subida do clock.</p>
+    </div>
+    
+    <div>
+        <p class="title">Flip-Flop D</p>
+        <img onclick="activateCont8()" class="port" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/D_Flip-flop_%28Simple%29_Symbol.svg/240px-D_Flip-flop_%28Simple%29_Symbol.svg.png">
+        <p class="sub">O Flip-Flop D possui a seguinte tabela de comportamento:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entrada D</th>
+                    <th>CLK (Clock)</th>
+                    <th>Saída Q</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="containerT">
+        <p class="pCont">O Flip-Flop T (ou toggle flip-flop) alterna seu estado a cada pulso de relógio. Quando a entrada T é verdadeira (1), a saída Q alterna entre 0 e 1 a cada pulso de relógio.</p>
+    </div>
+    
+    <div>
+        <p class="title">Flip-Flop T</p>
+        <img onclick="activateCont9()" class="port" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/T-Type_Flip-flop.svg/2048px-T-Type_Flip-flop.svg.png">
+        <p class="sub">O Flip-Flop T possui a seguinte tabela de comportamento:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entrada T</th>
+                    <th>CLK (Clock)</th>
+                    <th>Saída Q</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>Q (não altera)</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>Q (alternando)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="containerSR">
+        <p class="pCont">O Flip-Flop SR (Set-Reset) tem duas entradas, S e R, que definem o estado da saída Q. O Flip-Flop SR pode ser usado para armazenar um bit de informação e tem uma condição de indeterminação quando ambas as entradas são ativas.</p>
+    </div>
+    
+    <div>
+        <p class="title">Flip-Flop SR</p>
+        <img onclick="activateCont10()" class="port" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/SR_%28Clocked%29_Flip-flop.svg/2048px-SR_%28Clocked%29_Flip-flop.svg.png">
+        <p class="sub">O Flip-Flop SR possui a seguinte tabela de comportamento:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entrada S</th>
+                    <th>Entrada R</th>
+                    <th>Saída Q</th>
+                    <th>Saída Q'</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>Q (anterior)</td>
+                    <td>Q' (anterior)</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>Indeterminado</td>
+                    <td>Indeterminado</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="containerJK">
+        <p class="pCont">O Flip-Flop JK é uma versão aprimorada do Flip-Flop SR que resolve o problema da condição indeterminada. Ele tem entradas J e K, e a saída Q é atualizada conforme a combinação dessas entradas e o pulso do clock.</p>
+    </div>
+    
+    <div>
+        <p class="title">Flip-Flop JK</p>
+        <img onclick="activateCont11()" class="port" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/JK_Flip-flop_%28Simple%29_Symbol.svg/1024px-JK_Flip-flop_%28Simple%29_Symbol.svg.png">
+        <p class="sub">O Flip-Flop JK possui a seguinte tabela de comportamento:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entrada J</th>
+                    <th>Entrada K</th>
+                    <th>CLK (Clock)</th>
+                    <th>Saída Q</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>Q (anterior)</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>Q (invertido)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

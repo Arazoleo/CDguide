@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ports Guide</title>
+    <link rel="icon" href="https://site.unifesp.br/caec.sjc/images/logos/panda.png" type="image/x-icon">
+</head>
+<body>
+    <nav id = "navegationBar">
+        <div class = "option" onclick="windowTravel('index.html')">
+            Install WiredPanda
+        </div>
+        <div class = "option" onclick="windowTravel('ports.html')">
+            Portas lógicas
+        </div>
+        <div class = "option" onclick="windowTravel('flipflop.html')">
+            Flip-flops
+        </div>
+        <div class = "leg">
+            Desenvolvido por Leonardo Arazo e Clara Cavalheiro.
+        </div>
+    </nav>
+
+    <h1 class = "cl">
+        Clique nas portas lógicas
+    </h1>
+
+    <div class="container">
+        <p class = "pCont">AND - É uma porta lógica que resulta em verdadeiro (1) apenas se todas as suas entradas forem verdadeiras. Se qualquer uma das entradas for falsa (0), a saída será falsa.</p>
+    </div>
+
+    <div>
+     <br><br><br><br><br><br><br><br><br>   
+        <p class="title">AND</p>
+        <img  onclick="activateAnimation()" class = "port"src="https://cdn-icons-png.flaticon.com/512/3512/3512324.png">
+        <p class = "sub">A porta AND possui a seguinte tabela verdade: </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entrada A</th>
+                    <th>Entrada B</th>
+                    <th>Saída (A AND B)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class = "containerOR" >
+        <p class = "pCont">OR - A porta lógica OR resulta em verdadeiro (1) se pelo menos uma de suas entradas for verdadeira. A saída é falsa apenas se ambas as entradas forem falsas.</p>
+    </div>
+
+    <div>
+        <p class="title">OR</p>
+        <img  onclick="activateCont2()" id = "or"class = "port" src="https://blog.eletrogate.com/wp-content/uploads/2022/05/SIMB_OR-300x164.png.webp">
+        <p class = "sub" id="legOR">A porta OR possui a seguinte tabela verdade: </p>
+        <table class = "tabOR">
+            <thead>
+                <tr>
+                    <th>Entrada A</th>
+                    <th>Entrada B</th>
+                    <th>Saída (A AND B)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    
+
+    <div class = "containerNot" >
+        <p class = "pCont">NOT - Inverte a entrada. Se a entrada for verdadeira (1), a saída será falsa (0), e vice-versa.</p>
+    </div>
+    
+    <div>
+        <p class="title">NOT</p>
+        <img class="port" onclick="activateCont3()" src="https://blog.eletrogate.com/wp-content/uploads/2022/05/SIMB_NOT.png">
+        <p class="sub">A porta NOT possui a seguinte tabela verdade:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entrada A</th>
+                    <th>Saída (NOT A)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>1</td></tr>
+                <tr><td>1</td><td>0</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class = "containerXOR" >
+        <p class = "pCont">XOR - A saída é verdadeira (1) se exatamente uma das entradas for verdadeira. Se ambas forem verdadeiras ou ambas forem falsas, a saída será falsa (0).</p>
+    </div>
+
+    <div>
+        <p class="title">XOR</p>
+        <img onclick= "activateCont4()" class = "port" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/XOR_ANSI.svg/1200px-XOR_ANSI.svg.png">
+        <p class="sub">A porta XOR possui a seguinte tabela verdade:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entrada A</th>
+                    <th>Entrada B</th>
+                    <th>Saída (A XOR B)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>0</td><td>1</td><td>1</td></tr>
+                <tr><td>1</td><td>0</td><td>1</td></tr>
+                <tr><td>1</td><td>1</td><td>0</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class = "containerXNOR" >
+        <p class = "pCont">XNOR -  A saída é verdadeira (1) se ambas as entradas forem iguais (ou ambas verdadeiras ou ambas falsas). É o inverso da porta XOR.</p>
+    </div>
+    
+    <div>
+        <p class="title">XNOR</p>
+        <img onclick = "activateCont5()"class="port" id = "not"src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/XNOR_ANSI.svg/1200px-XNOR_ANSI.svg.png">
+        <p class="sub" id = "legNot"">A porta XNOR possui a seguinte tabela verdade:</p>
+        <table class="tabNot">
+            <thead>
+                <tr>
+                    <th>Entrada A</th>
+                    <th>Entrada B</th>
+                    <th>Saída (A XNOR B)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0</td><td>1</td></tr>
+                <tr><td>0</td><td>1</td><td>0</td></tr>
+                <tr><td>1</td><td>0</td><td>0</td></tr>
+                <tr><td>1</td><td>1</td><td>1</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class = "containerNAND" >
+        <p class = "pCont">NAND -A saída é falsa (0) apenas se todas as entradas forem verdadeiras. É o inverso da porta AND.</p>
+    </div>
+    
+    <div>
+        <p class="title">NAND</p>
+        <img onclick = "activateCont6()" class="port" src="https://static.thenounproject.com/png/77570-200.png">
+        <p class="sub">A porta NAND possui a seguinte tabela verdade:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entrada A</th>
+                    <th>Entrada B</th>
+                    <th>Saída (A NAND B)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0</td><td>1</td></tr>
+                <tr><td>0</td><td>1</td><td>1</td></tr>
+                <tr><td>1</td><td>0</td><td>1</td></tr>
+                <tr><td>1</td><td>1</td><td>0</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class = "containerNOR" >
+        <p class = "pCont">NOR - A saída é verdadeira (1) apenas se todas as entradas forem falsas. É o inverso da porta OR. </p>
+
+    </div>
+    
+
+    <div>
+        <p class="title">NOR</p>
+        <img onclick = "activateCont7()"class="port" src="https://www.maffucci.it/wp-content/uploads/2018/09/NOR.png">
+        <p class="sub">A porta NOR possui a seguinte tabela verdade:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entrada A</th>
+                    <th>Entrada B</th>
+                    <th>Saída (A NOR B)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0</td><td>1</td></tr>
+                <tr><td>0</td><td>1</td><td>0</td></tr>
+                <tr><td>1</td><td>0</td><td>0</td></tr>
+                <tr><td>1</td><td>1</td><td>0</td></tr>
+            </tbody>
+        </table>
+    </div>
+<script src = "script.js"></script>
+</body>
+</html>
+
+
+
+</body>
+</html>    
